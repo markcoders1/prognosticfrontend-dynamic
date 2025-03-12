@@ -60,7 +60,8 @@ const App: React.FC = () => {
             const API_BASE =
                 window.location.hostname === 'localhost'
                     ? 'http://127.0.0.1:5001'
-                    : 'https://prognostic-ai-backend-acab284a2f57.herokuapp.com';
+                    : 
+                    'https://prognostic-ai-backend-acab284a2f57.herokuapp.com';
 
             const params = new URLSearchParams(window.location.search);
             const user_email = params.get('user_email')
@@ -140,7 +141,7 @@ const App: React.FC = () => {
                                 <div className="inner">
                                     <Header/>
                                     <hr id="divider02" className="hr-custom"/>
-                                    {loading ? (
+                                    {!loading ? (
                                         <>
                                             <LoadingCircle/>
                                             <p id="text07" className="style1">All rights reserved</p>
